@@ -272,8 +272,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "#EAB839",
@@ -392,8 +391,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -477,8 +475,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "#EAB839",
@@ -611,8 +608,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -724,8 +720,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -835,8 +830,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -947,8 +941,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -974,6 +967,258 @@
                 "mode": "single",
                 "sort": "none"
               }
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-18": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_pitch{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 18,
+        "links": [],
+        "title": "PItch Angle",
+        "vizConfig": {
+          "kind": "timeseries",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "barWidthFactor": 0.6,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": [
+                {
+                  "matcher": {
+                    "id": "byNames",
+                    "options": {
+                      "mode": "exclude",
+                      "names": [
+                        "m5stampFly_pitch"
+                      ],
+                      "prefix": "All except:",
+                      "readOnly": true
+                    }
+                  },
+                  "properties": [
+                    {
+                      "id": "custom.hideFrom",
+                      "value": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom",
+                "showLegend": true
+              },
+              "tooltip": {
+                "hideZeros": false,
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-19": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_pitch{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 19,
+        "links": [],
+        "title": "PItch Angle",
+        "vizConfig": {
+          "kind": "gauge",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": [
+                {
+                  "matcher": {
+                    "id": "byNames",
+                    "options": {
+                      "mode": "exclude",
+                      "names": [
+                        "m5stampFly_pitch"
+                      ],
+                      "prefix": "All except:",
+                      "readOnly": true
+                    }
+                  },
+                  "properties": []
+                }
+              ]
+            },
+            "options": {
+              "minVizHeight": 75,
+              "minVizWidth": 75,
+              "orientation": "auto",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showThresholdLabels": false,
+              "showThresholdMarkers": true,
+              "sizing": "auto"
             },
             "pluginVersion": "12.1.0-240183"
           }
@@ -1062,8 +1307,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -1092,6 +1336,1153 @@
                 "mode": "single",
                 "sort": "none"
               }
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-20": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_pitch",
+                      "legendFormat": "__auto",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "Forward or backward tilt",
+        "id": 20,
+        "links": [],
+        "title": "Pitch",
+        "vizConfig": {
+          "kind": "canvas",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "infinitePan": false,
+              "inlineEditing": true,
+              "panZoom": false,
+              "root": {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  },
+                  "image": {
+                    "field": "{__name__=\"m5stampFly_pitch\", __proxy_source__=\"influx\", location=\"home\"}",
+                    "mode": "fixed"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "elements": [
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "pitchAngle": {
+                        "field": "m5stampFly_pitch",
+                        "mode": "clamped"
+                      }
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "links": [],
+                    "name": "Element 3",
+                    "placement": {
+                      "height": 100.00000762939453,
+                      "left": 93,
+                      "top": 11,
+                      "width": 320.0000305175781
+                    },
+                    "type": "droneSide"
+                  }
+                ],
+                "name": "Element 1745482992792",
+                "placement": {
+                  "height": 100,
+                  "left": 0,
+                  "rotation": 0,
+                  "top": 0,
+                  "width": 100
+                },
+                "type": "frame"
+              },
+              "showAdvancedTypes": true
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-21": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "exemplar": false,
+                      "expr": "m5stampFly_roll{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 21,
+        "links": [],
+        "title": "Roll Angle",
+        "vizConfig": {
+          "kind": "timeseries",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "barWidthFactor": 0.6,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": []
+            },
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom",
+                "showLegend": true
+              },
+              "tooltip": {
+                "hideZeros": false,
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-22": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "exemplar": false,
+                      "expr": "m5stampFly_roll{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 22,
+        "links": [],
+        "title": "Roll Angle",
+        "vizConfig": {
+          "kind": "gauge",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": []
+            },
+            "options": {
+              "minVizHeight": 75,
+              "minVizWidth": 75,
+              "orientation": "auto",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showThresholdLabels": false,
+              "showThresholdMarkers": true,
+              "sizing": "auto"
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-23": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_roll{}",
+                      "legendFormat": "__auto",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "When the drone tilts sideways",
+        "id": 23,
+        "links": [],
+        "title": "Roll",
+        "vizConfig": {
+          "kind": "canvas",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "infinitePan": false,
+              "inlineEditing": true,
+              "panZoom": false,
+              "root": {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "elements": [
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "rollAngle": {
+                        "field": "m5stampFly_roll",
+                        "mode": "clamped"
+                      }
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "links": [],
+                    "name": "Element 1",
+                    "placement": {
+                      "height": 100.00000762939453,
+                      "left": 95,
+                      "top": 14,
+                      "width": 320.0000305175781
+                    },
+                    "type": "droneFront"
+                  }
+                ],
+                "name": "Element 1745482992792",
+                "placement": {
+                  "height": 100,
+                  "left": 0,
+                  "rotation": 0,
+                  "top": 0,
+                  "width": 100
+                },
+                "type": "frame"
+              },
+              "showAdvancedTypes": true
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-24": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_yaw{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 24,
+        "links": [],
+        "title": "Yaw Angle",
+        "vizConfig": {
+          "kind": "timeseries",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "barWidthFactor": 0.6,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": []
+            },
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom",
+                "showLegend": true
+              },
+              "tooltip": {
+                "hideZeros": false,
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-25": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_yaw{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 25,
+        "links": [],
+        "title": "Yaw Angle",
+        "vizConfig": {
+          "kind": "gauge",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": -90
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": -45
+                    },
+                    {
+                      "color": "semi-dark-yellow",
+                      "value": 45
+                    },
+                    {
+                      "color": "red",
+                      "value": 90
+                    }
+                  ]
+                },
+                "unit": "degree"
+              },
+              "overrides": []
+            },
+            "options": {
+              "minVizHeight": 75,
+              "minVizWidth": 75,
+              "orientation": "auto",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showThresholdLabels": false,
+              "showThresholdMarkers": true,
+              "sizing": "auto"
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-26": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_yaw{}",
+                      "legendFormat": "__auto",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "Left or right rotation around its center",
+        "id": 26,
+        "links": [],
+        "title": "Yaw",
+        "vizConfig": {
+          "kind": "canvas",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "infinitePan": false,
+              "inlineEditing": true,
+              "panZoom": false,
+              "root": {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "elements": [
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "yawAngle": {
+                        "field": "m5stampFly_yaw",
+                        "mode": "clamped"
+                      }
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "links": [],
+                    "name": "Element 1",
+                    "placement": {
+                      "height": 85,
+                      "left": 206,
+                      "top": 7,
+                      "width": 120
+                    },
+                    "type": "droneTop"
+                  }
+                ],
+                "name": "Element 1745482992792",
+                "placement": {
+                  "height": 100,
+                  "left": 0,
+                  "rotation": 0,
+                  "top": 0,
+                  "width": 100
+                },
+                "type": "frame"
+              },
+              "showAdvancedTypes": true
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-27": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_alt_flag{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "",
+        "id": 27,
+        "links": [],
+        "title": "Altitude Flag",
+        "vizConfig": {
+          "kind": "stat",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "colorMode": "value",
+              "graphMode": "area",
+              "justifyMode": "auto",
+              "orientation": "auto",
+              "percentChangeColorMode": "standard",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showPercentChange": false,
+              "textMode": "auto",
+              "wideLayout": true
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-28": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "exemplar": false,
+                      "expr": "m5stampFly_fly_mode{location=\"home\"}",
+                      "instant": true,
+                      "legendFormat": "{{__name__}}",
+                      "range": false
+                    }
+                  },
+                  "refId": "A"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": [
+              {
+                "kind": "organize",
+                "spec": {
+                  "id": "organize",
+                  "options": {
+                    "excludeByName": {
+                      "Time": true,
+                      "m5stampFly_fly_mode": false
+                    },
+                    "includeByName": {},
+                    "indexByName": {},
+                    "renameByName": {
+                      "m5stampFly_fly_mode": "Current Drone Mode"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "description": "",
+        "id": 28,
+        "links": [],
+        "title": "Flight Mode",
+        "vizConfig": {
+          "kind": "stat",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "mappings": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "purple",
+                        "index": 0,
+                        "text": "INIT_MODE"
+                      },
+                      "1": {
+                        "color": "blue",
+                        "index": 1,
+                        "text": "AVERAGE_MODE"
+                      },
+                      "2": {
+                        "color": "green",
+                        "index": 2,
+                        "text": "FLIGHT_MODE"
+                      },
+                      "3": {
+                        "color": "yellow",
+                        "index": 3,
+                        "text": "PARKING_MODE"
+                      },
+                      "4": {
+                        "color": "orange",
+                        "index": 4,
+                        "text": "LOG_MODE"
+                      },
+                      "5": {
+                        "color": "red",
+                        "index": 5,
+                        "text": "AUTO_LANDING_MODE"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "colorMode": "value",
+              "graphMode": "area",
+              "justifyMode": "auto",
+              "orientation": "auto",
+              "percentChangeColorMode": "standard",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showPercentChange": false,
+              "textMode": "auto",
+              "wideLayout": true
+            },
+            "pluginVersion": "12.1.0-240183"
+          }
+        }
+      }
+    },
+    "panel-29": {
+      "kind": "Panel",
+      "spec": {
+        "data": {
+          "kind": "QueryGroup",
+          "spec": {
+            "queries": [
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_tof_front{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "A"
+                }
+              },
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_altitude{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "B"
+                }
+              },
+              {
+                "kind": "PanelQuery",
+                "spec": {
+                  "hidden": false,
+                  "query": {
+                    "kind": "prometheus",
+                    "spec": {
+                      "editorMode": "code",
+                      "expr": "m5stampFly_altitude2{location=\"home\"}",
+                      "instant": false,
+                      "legendFormat": "{{__name__}}",
+                      "range": true
+                    }
+                  },
+                  "refId": "C"
+                }
+              }
+            ],
+            "queryOptions": {
+              "interval": "1s"
+            },
+            "transformations": []
+          }
+        },
+        "description": "Time-of-Flight (TOF) sensor. This sensor measures the distance to objects in front of the drone using light pulses",
+        "id": 29,
+        "links": [],
+        "title": "TOF Front",
+        "vizConfig": {
+          "kind": "bargauge",
+          "spec": {
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "thresholds"
+                },
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "options": {
+              "displayMode": "gradient",
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom",
+                "showLegend": false
+              },
+              "maxVizHeight": 300,
+              "minVizHeight": 16,
+              "minVizWidth": 8,
+              "namePlacement": "auto",
+              "orientation": "auto",
+              "reduceOptions": {
+                "calcs": [
+                  "lastNotNull"
+                ],
+                "fields": "",
+                "values": false
+              },
+              "showUnfilled": true,
+              "sizing": "auto",
+              "valueMode": "color"
             },
             "pluginVersion": "12.1.0-240183"
           }
@@ -1178,8 +2569,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -1322,8 +2712,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": 0
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -1549,6 +2938,175 @@
             },
             "title": "Soil Moisture (Plant)"
           }
+        },
+        {
+          "kind": "TabsLayoutTab",
+          "spec": {
+            "layout": {
+              "kind": "GridLayout",
+              "spec": {
+                "items": [
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-18"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 0,
+                      "y": 0
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-19"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 8,
+                      "y": 0
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-20"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 16,
+                      "y": 0
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-21"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 0,
+                      "y": 5
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-22"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 8,
+                      "y": 5
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-23"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 16,
+                      "y": 5
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-24"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 0,
+                      "y": 10
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-25"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 8,
+                      "y": 10
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-26"
+                      },
+                      "height": 5,
+                      "width": 8,
+                      "x": 16,
+                      "y": 10
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-27"
+                      },
+                      "height": 4,
+                      "width": 8,
+                      "x": 0,
+                      "y": 15
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-28"
+                      },
+                      "height": 4,
+                      "width": 8,
+                      "x": 8,
+                      "y": 15
+                    }
+                  },
+                  {
+                    "kind": "GridLayoutItem",
+                    "spec": {
+                      "element": {
+                        "kind": "ElementReference",
+                        "name": "panel-29"
+                      },
+                      "height": 4,
+                      "width": 8,
+                      "x": 16,
+                      "y": 15
+                    }
+                  }
+                ]
+              }
+            },
+            "title": "M5 Drone"
+          }
         }
       ]
     }
@@ -1558,7 +3116,7 @@
   "preload": false,
   "tags": [],
   "timeSettings": {
-    "autoRefresh": "5s",
+    "autoRefresh": "1s",
     "autoRefreshIntervals": [
       "1s",
       "5s",
@@ -1573,11 +3131,11 @@
       "1d"
     ],
     "fiscalYearStartMonth": 0,
-    "from": "now-5m",
+    "from": "2025-04-27T20:32:29.360Z",
     "hideTimepicker": false,
     "timezone": "browser",
-    "to": "now"
+    "to": "2025-04-27T20:33:42.820Z"
   },
-  "title": "GrafanaCON25 - Grafana you can touch",
+  "title": "Grafana IOT",
   "variables": []
 }
