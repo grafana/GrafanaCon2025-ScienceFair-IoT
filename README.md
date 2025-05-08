@@ -13,3 +13,6 @@ This repo contains all the code that was used to build the different sensors at 
 - Heart Rate
 
 [Live Dashboard](https://grafanacon.grafana.net/public-dashboards/04f1088996984d5a99875aed48c3f5c3?refresh=auto&from=now-3h&to=now&timezone=browser) at GrafanaCON
+
+![image](https://github.com/user-attachments/assets/98983f32-4bbf-489a-836c-e17307522550)
+
