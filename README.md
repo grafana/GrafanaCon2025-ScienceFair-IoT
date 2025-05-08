@@ -11,6 +11,9 @@ This repo contains all the code that was used to build the different sensors at 
 - M5 Drone
 - Earth / Soil Moisture
 - Heart Rate
+- [M5Stamp Drone Controller/Joystick](https://github.com/grafana/M5StampFlyController-GrafanaCon2025)
+- [M5Stamp Drone Actual](https://github.com/grafana/M5StampFly-GrafanaCon2025)
+
 
 [Live Dashboard](https://grafanacon.grafana.net/public-dashboards/04f1088996984d5a99875aed48c3f5c3?refresh=auto&from=now-3h&to=now&timezone=browser) at GrafanaCON
 
